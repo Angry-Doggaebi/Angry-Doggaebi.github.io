@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(229, 233, 242);
+
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+}
+.box{
+    width: 700px;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+.container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    display: inline-block;
+    font-size: 25px;
+}
+#numOfNoti{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(42, 42, 160);
+    color: white;
+    border-radius: 5px;
+
+}
+#markAll{
+    text-decoration-line: none;
+    color: gray;
+}
+#markAll:hover{
+    color: rgb(42, 42, 160);
+}
+.notifications{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.person{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    /* grid-template-rows: repeat(7, 1fr); */
+    row-gap: 5px;
+
+    background-color: hsl(210, 60%, 98%);
+    border-radius: 10px;
+
+    padding: 10px;
+}
+.imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 50px;
+}
+.stories{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.name{
+    font-weight: bold;
+    text-decoration-line: none;
+    color: black;
+}
+.name:hover{
+    color: hsl(219, 85%, 26%);
+}
+p{
+    display: inline;
+    color: hsl(219, 12%, 42%);
+}
+.noti_link{
+    font-weight: bold;
+    text-decoration-line: none;
+    color: hsl(219, 85%, 26%);
+}
+.readmark{
+    font-size: 11px;
+    color: hsl(1, 90%, 64%);
+}
+time{
+    color: gray;
+}
+.messages{
+    background-color: hsl(211, 68%, 94%);
+    border-radius: 5px;
+    padding: 10px;
+    
+    display: none;
+}
+#emptybox{
+    background-color: transparent;
+}

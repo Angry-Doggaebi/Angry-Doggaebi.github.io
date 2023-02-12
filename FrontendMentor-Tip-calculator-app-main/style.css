@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+h1, h2{
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    color: hsl(184, 14%, 56%);
+}
+.words>span{
+    font-size: 12px;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+.leftside{
+    position: relative;
+    margin: 20px;
+    width: 250px;
+}
+#svg_dollor{
+    position: absolute;
+    top: 56px;
+    left: 10px;
+}
+#svg_person{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+#billNum, #peopleNum{
+    width: 100%;
+    height: 35px;
+    border: 0px;
+    padding: 0px;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    color: hsl(183, 100%, 15%);
+}
+#billNum:focus, #peopleNum:focus, #custom:focus{
+    /* 크롬브라우저에서 입력창에 생기는 검은 선 제거 */
+    outline: none; 
+    border: 2px solid hsl(172, 67%, 45%);
+}
+/* 빈 칸(숫자가 아닌 경우)입력시, 0입력시 */
+#peopleNum.Error{
+    width: 100%;
+    height: 35px;
+    border: 0px;
+    padding: 0px;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    color: hsl(183, 100%, 15%);
+}
+/* 0입력시 */
+#peopleNum.Error:focus{
+    outline: none; 
+    border: 2px solid hsl(8, 67%, 45%);
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.btnLine{
+    display: flex;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.btn{
+    display: none;
+}
+.btnLine>label {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+}
+
+/*btnLine의 손자 input이 체크되었을 때 인접label에 효과*/
+.btnLine input:checked+label {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+#custom{
+    width: 75px;
+    height: 35px;
+    border: 0px;
+    padding: 0px;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    color: hsl(183, 100%, 15%);
+}
+::-webkit-input-placeholder{
+    text-align: right;
+    color: hsl(184, 14%, 56%);
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+}
+.rightside{
+    background-color: hsl(183, 100%, 15%);
+    margin: 20px;
+    padding: 0px 20px 0px 20px;
+    border-radius: 20px;
+    width: 250px;
+}
+.result{
+    display: flex;
+    flex-flow: row;
+    margin: 20px 0px 20px 0px;
+}
+.words{
+    flex-shrink: 0;
+     /*크기가 flex-basis(기본크기)보다 작아지지 않는다 */
+}
+.words>span{
+    color: hsl(186, 14%, 43%);
+    font-family: 'Space Mono', monospace;
+}
+.result>h3{
+    flex-grow: 1;
+    /*Flexible, 빈 공간을 메우며 크기가 flex-basis보다 늘어남 */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 0px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(172, 67%, 45%);
+    font-size: 28px;
+}
+.rightside h2{
+    color: hsl(189, 41%, 97%);
+    margin: 0px;
+}
+.inputTitleLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#cannotEmpty, #cannotZero{
+    font-size: 12px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(8, 67%, 45%);;
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#reset{
+    width: 100%;
+    height: 35px;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    border: 0px;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+}
